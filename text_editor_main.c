@@ -73,6 +73,7 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
             }
             lineNumber++;
         }
+        printf("\n");
     }
 }
 
