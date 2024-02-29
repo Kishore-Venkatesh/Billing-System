@@ -10,9 +10,10 @@
 // A void function to display the menu of operations that can be done in a text editor
 void menu()
 {
-    printf("\n ======Text Editor Menu======\n");
-    printf("1.Open File");
-    printf("\n==============================\n");
+    printf("\n\n======Text Editor Menu======\n\n");
+    printf("1.Open File\n");
+    printf("2.Close File\n");
+    printf("\n\n==============================\n\n");
 }
 
 // A void function that opens the file if the file exists
@@ -31,6 +32,22 @@ void openFile(char filename[MAX_FILENAME_LENGTH],FILE **file)
     }
 }
 
+// A void function to close the file 
+void closeFile(FILE **file)
+{
+    if(*file != NULL)
+    {
+        fclose(*file);
+        printf("File has been closed successfully.");
+    }
+    else
+    {
+        printf("ERROR: Unable to close the file.Terminating the text editor.");
+        exit(1);
+    }
+}
+
+
 // Main function for command line text editor
 int main()
 {
@@ -38,16 +55,17 @@ int main()
     char buffer[MAX_BUFFER_SIZE];
     FILE *file = NULL;
 
-    // Display the menu
-    menu();
-
-    int choice;
-    printf("Enter your choice: ");
-    scanf("%d",&choice);
-
     while(1)
     {
+        // Display the menu for Text Editor
+        menu();
+        
+        // A int value taken from the user for selecting the option from the menu
+        int choice;
+        printf("Enter your choice: ");
+        scanf("%d",&choice);
 
+        // A seitch-case statement for the text editor menu
         switch(choice)
         {
             case 1:
@@ -55,6 +73,10 @@ int main()
             openFile(filename,&file);
             break;
 
+            case 2:
+            // Close the file
+            closeFile(&file);
+            break;
         }
 
     }
