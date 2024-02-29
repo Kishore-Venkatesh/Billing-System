@@ -12,7 +12,7 @@ void menu()
 {
     printf("\n\n======Text Editor Menu======\n\n");
     printf("1.Open File\n");
-    printf("2.View Content");
+    printf("2.View Content\n");
     printf("3.Close File");
     printf("\n\n==============================\n\n");
 }
