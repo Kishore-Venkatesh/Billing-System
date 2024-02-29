@@ -54,9 +54,24 @@ void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
     }
 }
 // A void function to search text in the file
-void searchText(FILE *file,char buffer[MAX_BUFFER_SIZE])
+void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
 {
-    
+    if(*file != NULL)
+    {
+        char search[MAX_BUFFER_SIZE];
+        printf("Enter text to search: ");
+        scanf("%[^\n]",search);
+        rewind(*file);
+        int lineNumber=1;
+        while(fgets(buffer,MAX_BUFFER_SIZE,*file) != NULL)
+        {
+            if(strstr(buffer,search) != NULL)
+            {
+                printf("Found: %s",buffer);
+            }
+            lineNumber++;
+        }
+    }
 }
 
 // A void function to close and exit the file 
