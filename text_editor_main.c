@@ -53,6 +53,11 @@ void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
         printf("No file is currently open.\n");
     }
 }
+// A void function to search text in the file
+void searchText(FILE *file,char buffer[MAX_BUFFER_SIZE])
+{
+    
+}
 
 // A void function to close and exit the file 
 void closeFile(FILE **file)
