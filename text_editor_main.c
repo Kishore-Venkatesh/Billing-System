@@ -69,7 +69,7 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
         {
             if(strstr(buffer,search) != NULL)
             {
-                printf("Found: %s",buffer);
+                printf("Text found at line %d : %s\n",lineNumber,buffer);
             }
             lineNumber++;
         }
