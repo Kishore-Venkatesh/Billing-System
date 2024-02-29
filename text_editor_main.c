@@ -111,8 +111,8 @@ void editFile(FILE **file, char buffer[MAX_BUFFER_SIZE]) {
 }
 
 // A void function to save the file
-void saveFile(char filename[MAX_FILENAME_LENGTH], FILE *file, char buffer[MAX_BUFFER_SIZE]) {
-    if (file != NULL) {
+void saveFile(char filename[MAX_FILENAME_LENGTH], FILE **file, char buffer[MAX_BUFFER_SIZE]) {
+    if (*file != NULL) {
         printf("Enter filename to save: ");
         scanf("%s", filename);
         FILE *newFile = fopen(filename, "w");
@@ -191,6 +191,11 @@ int main()
             break;
 
             case 6:
+            // Save the file
+            saveFile(filename, &file,buffer);
+            break;
+
+            case 7:
             // Close the file
             closeFile(&file);
             break;
