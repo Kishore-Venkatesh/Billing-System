@@ -33,23 +33,6 @@ void openFile(char filename[MAX_FILENAME_LENGTH],FILE **file)
     }
 }
 
-// A void function to close and exit the file 
-void closeFile(FILE **file)
-{
-    if(*file != NULL)
-    {
-        fclose(*file);
-        printf("File has been closed successfully.\n");
-        printf("Exiting the Command Line Text Editor.\n");
-        exit(0);
-    }
-    else
-    {
-        printf("ERROR: File is NULL.Terminating the text editor.");
-        exit(1);
-    }
-}
-
 // A void function to view the contents of the file
 void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
 {
@@ -68,6 +51,23 @@ void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
     else
     {
         printf("No file is currently open.\n");
+    }
+}
+
+// A void function to close and exit the file 
+void closeFile(FILE **file)
+{
+    if(*file != NULL)
+    {
+        fclose(*file);
+        printf("File has been closed successfully.\n");
+        printf("Exiting the Command Line Text Editor.\n");
+        exit(0);
+    }
+    else
+    {
+        printf("ERROR: File is NULL.Terminating the text editor.");
+        exit(1);
     }
 }
 
