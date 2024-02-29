@@ -110,7 +110,7 @@ void editFile(FILE **file, char buffer[MAX_BUFFER_SIZE]) {
     }
 }
 
-// A void function to save the file
+// A void function to save the file and create a new file if didn't exist
 void saveFile(char filename[MAX_FILENAME_LENGTH], FILE **file, char buffer[MAX_BUFFER_SIZE]) {
     if (*file != NULL) {
         printf("Enter filename to save: ");
