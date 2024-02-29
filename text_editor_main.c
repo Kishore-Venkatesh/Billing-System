@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 #define MAX_FILENAME_LENGTH 20
 #define MAX_BUFFER_SIZE 1024
@@ -67,11 +68,18 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
         int lineNumber=1;
         while(fgets(buffer,MAX_BUFFER_SIZE,*file) != NULL)
         {
+            bool flag=false;
             if(strstr(buffer,search) != NULL)
             {
+                flag=true;
                 printf("Text found at line %d : %s\n",lineNumber,buffer);
             }
             lineNumber++;
+
+            if(!flag)
+            {
+                printf("No word such as %s is found in the file.\n",buffer);
+            }
         }
         printf("\n");
     }
