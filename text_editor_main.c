@@ -66,21 +66,22 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
         scanf("%s[^\n]",search);
         rewind(*file);
         int lineNumber=1;
+
+        bool flag=false;
+
         while(fgets(buffer,MAX_BUFFER_SIZE,*file) != NULL)
         {
-            bool flag=false;
             if(strstr(buffer,search) != NULL)
             {
                 flag=true;
                 printf("Text found at line %d : %s\n",lineNumber,buffer);
             }
             lineNumber++;
-
-            if(!flag)
-            {
-                printf("No word such as %s is found in the file.\n",buffer);
-            }
         }
+        if(!flag)
+            {
+                printf("No word such as %s is found in the file.\n",search);
+            }
         printf("\n");
     }
     else
