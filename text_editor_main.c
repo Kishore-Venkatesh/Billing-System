@@ -16,7 +16,8 @@ void menu()
     printf("2.View Content\n");
     printf("3.Search Text\n");
     printf("4.Clear Buffer\n");
-    printf("5.Edit the file\n");
+    printf("5.Edit File\n");
+    printf("6.Save File\n");
     printf("6.Close File");
     printf("\n\n==============================\n\n");
 }
