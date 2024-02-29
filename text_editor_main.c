@@ -150,6 +150,11 @@ int main()
             break;
 
             case 4:
+            // Clear the buffer
+            clearBuffer(buffer);
+            break;
+            
+            case 5:
             // Close the file
             closeFile(&file);
             break;
