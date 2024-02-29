@@ -98,6 +98,17 @@ void clearBuffer(char buffer[MAX_BUFFER_SIZE])
     printf("The buffer is cleared.\n");
 }
 
+// A void function to edit the file
+void editText(FILE **file, char buffer[MAX_BUFFER_SIZE]) {
+    if (*file != NULL) {
+        printf("Enter text to add to the buffer (max %d characters): ", MAX_BUFFER_SIZE);
+        scanf(" %s[^\n]", buffer);
+        printf("Text added to the buffer.\n");
+    } else {
+        printf("No file is currently open.\n");
+    }
+}
+
 // A void function to close and exit the file 
 void closeFile(FILE **file)
 {
