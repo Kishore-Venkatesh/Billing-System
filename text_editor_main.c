@@ -12,7 +12,8 @@ void menu()
 {
     printf("\n\n======Text Editor Menu======\n\n");
     printf("1.Open File\n");
-    printf("2.Close File");
+    printf("2.View Content");
+    printf("3.Close File");
     printf("\n\n==============================\n\n");
 }
 
@@ -49,6 +50,22 @@ void closeFile(FILE **file)
     }
 }
 
+// A void function to view the contents of the file
+void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
+{
+    if(file != NULL)
+    {
+        // Move the file pointer to the beginning of the file
+        rewind(*file);
+        printf("Contents of the File:\n");
+        int lineNumber = 1;
+        while(fgets(buffer,MAX_BUFFER_SIZE,*file) != NULL)
+        {
+            printf("%d: %s",lineNumber++,buffer);
+        }
+    }
+}
+
 // Main function for command line text editor
 int main()
 {
@@ -74,7 +91,7 @@ int main()
             openFile(filename,&file);
             break;
 
-            case 2:
+            case 3:
             // Close the file
             closeFile(&file);
             break;
