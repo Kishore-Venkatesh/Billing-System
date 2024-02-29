@@ -88,7 +88,7 @@ int main()
         printf("Enter your choice: ");
         scanf("%d",&choice);
 
-        // A seitch-case statement for the text editor menu
+        // A switch-case statement for the text editor menu
         switch(choice)
         {
             case 1:
