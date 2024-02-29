@@ -75,6 +75,10 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
         }
         printf("\n");
     }
+    else
+    {
+        printf("No file is currently open.\n");
+    }
 }
 
 // A void function to close and exit the file 
