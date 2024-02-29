@@ -63,6 +63,7 @@ void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
         {
             printf("%d: %s",lineNumber++,buffer);
         }
+        printf("\n");
     }
     else
     {
