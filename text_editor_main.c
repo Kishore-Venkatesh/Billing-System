@@ -201,6 +201,9 @@ int main()
             closeFile(&file);
             break;
 
+            default:
+            printf("Please enter a valid option from the menu.\n");
+
         }
 
     }
