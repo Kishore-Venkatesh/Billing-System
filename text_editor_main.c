@@ -134,7 +134,7 @@ int main()
     char buffer[MAX_BUFFER_SIZE];
     FILE *file = NULL;
 
-    while(1)
+    while(true)
     {
         // Display the menu for Text Editor
         menu();
