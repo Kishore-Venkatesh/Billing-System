@@ -90,6 +90,13 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
     }
 }
 
+// A void function to clear the buffer
+void clearBuffer(char buffer[MAX_BUFFER_SIZE])
+{
+    buffer[0]="\0";
+    printf("The buffer is cleared.\n");
+}
+
 // A void function to close and exit the file 
 void closeFile(FILE **file)
 {
