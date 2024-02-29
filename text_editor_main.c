@@ -15,7 +15,8 @@ void menu()
     printf("1.Open File\n");
     printf("2.View Content\n");
     printf("3.Search Text\n");
-    printf("4.Close File");
+    printf("4.Clear Buffer");
+    printf("5.Close File");
     printf("\n\n==============================\n\n");
 }
 
@@ -153,7 +154,7 @@ int main()
             // Clear the buffer
             clearBuffer(buffer);
             break;
-            
+
             case 5:
             // Close the file
             closeFile(&file);
