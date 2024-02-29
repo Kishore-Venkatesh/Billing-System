@@ -15,8 +15,9 @@ void menu()
     printf("1.Open File\n");
     printf("2.View Content\n");
     printf("3.Search Text\n");
-    printf("4.Clear Buffer");
-    printf("5.Close File");
+    printf("4.Clear Buffer\n");
+    printf("5.Edit the file\n");
+    printf("6.Close File");
     printf("\n\n==============================\n\n");
 }
 
@@ -94,7 +95,7 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
 // A void function to clear the buffer
 void clearBuffer(char buffer[MAX_BUFFER_SIZE])
 {
-    buffer[0]="\0";
+    buffer[0] = '\0';
     printf("The buffer is cleared.\n");
 }
 
