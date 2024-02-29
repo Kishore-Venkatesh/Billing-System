@@ -64,6 +64,10 @@ void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
             printf("%d: %s",lineNumber++,buffer);
         }
     }
+    else
+    {
+        print("No file is currently open.\n");
+    }
 }
 
 // Main function for command line text editor
