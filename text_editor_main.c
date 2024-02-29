@@ -18,7 +18,7 @@ void menu()
     printf("4.Clear Buffer\n");
     printf("5.Edit File\n");
     printf("6.Save File\n");
-    printf("6.Close File");
+    printf("7.Close File");
     printf("\n\n==============================\n\n");
 }
 
