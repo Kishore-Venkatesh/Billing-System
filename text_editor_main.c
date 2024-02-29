@@ -110,6 +110,24 @@ void editFile(FILE **file, char buffer[MAX_BUFFER_SIZE]) {
     }
 }
 
+// A void function to save the file
+void saveFile(char filename[MAX_FILENAME_LENGTH], FILE *file, char buffer[MAX_BUFFER_SIZE]) {
+    if (file != NULL) {
+        printf("Enter filename to save: ");
+        scanf("%s", filename);
+        FILE *newFile = fopen(filename, "w");
+        if (newFile == NULL) {
+            printf("Could not create or overwrite the file.\n");
+        } else {
+            fprintf(newFile, "%s", buffer);
+            fclose(newFile);
+            printf("File saved successfully.\n");
+        }
+    } else {
+        printf("No file is currently open.\n");
+    }
+}
+
 // A void function to close and exit the file 
 void closeFile(FILE **file)
 {
