@@ -99,7 +99,7 @@ void clearBuffer(char buffer[MAX_BUFFER_SIZE])
 }
 
 // A void function to edit the file
-void editText(FILE **file, char buffer[MAX_BUFFER_SIZE]) {
+void editFile(FILE **file, char buffer[MAX_BUFFER_SIZE]) {
     if (*file != NULL) {
         printf("Enter text to add to the buffer (max %d characters): ", MAX_BUFFER_SIZE);
         scanf(" %s[^\n]", buffer);
@@ -167,6 +167,11 @@ int main()
             break;
 
             case 5:
+            // Edit the file
+            editFile(&file,buffer);
+            break;
+
+            case 6:
             // Close the file
             closeFile(&file);
             break;
