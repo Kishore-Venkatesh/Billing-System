@@ -13,7 +13,8 @@ void menu()
     printf("\n\n======Text Editor Menu======\n\n");
     printf("1.Open File\n");
     printf("2.View Content\n");
-    printf("3.Close File");
+    printf("3.Search Text\n");
+    printf("4.Close File");
     printf("\n\n==============================\n\n");
 }
 
@@ -53,6 +54,7 @@ void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
         printf("No file is currently open.\n");
     }
 }
+
 // A void function to search text in the file
 void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
 {
@@ -60,7 +62,7 @@ void searchText(FILE **file,char buffer[MAX_BUFFER_SIZE])
     {
         char search[MAX_BUFFER_SIZE];
         printf("Enter text to search: ");
-        scanf("%[^\n]",search);
+        scanf("%s[^\n]",search);
         rewind(*file);
         int lineNumber=1;
         while(fgets(buffer,MAX_BUFFER_SIZE,*file) != NULL)
