@@ -12,7 +12,7 @@ void menu()
 {
     printf("\n\n======Text Editor Menu======\n\n");
     printf("1.Open File\n");
-    printf("2.Close File\n");
+    printf("2.Close File");
     printf("\n\n==============================\n\n");
 }
 
@@ -32,21 +32,22 @@ void openFile(char filename[MAX_FILENAME_LENGTH],FILE **file)
     }
 }
 
-// A void function to close the file 
+// A void function to close and exit the file 
 void closeFile(FILE **file)
 {
     if(*file != NULL)
     {
         fclose(*file);
-        printf("File has been closed successfully.");
+        printf("File has been closed successfully.\n");
+        printf("Exiting the Command Line Text Editor.\n");
+        exit(0);
     }
     else
     {
-        printf("ERROR: Unable to close the file.Terminating the text editor.");
+        printf("ERROR: File is NULL.Terminating the text editor.");
         exit(1);
     }
 }
-
 
 // Main function for command line text editor
 int main()
@@ -77,6 +78,7 @@ int main()
             // Close the file
             closeFile(&file);
             break;
+
         }
 
     }
