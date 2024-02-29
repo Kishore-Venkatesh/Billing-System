@@ -67,7 +67,7 @@ void viewContent(FILE **file,char buffer[MAX_BUFFER_SIZE])
     }
     else
     {
-        print("No file is currently open.\n");
+        printf("No file is currently open.\n");
     }
 }
 
@@ -94,6 +94,11 @@ int main()
             case 1:
             // Open the file 
             openFile(filename,&file);
+            break;
+            
+            case 2:
+            // View the contents of the file 
+            viewContent(&file,buffer);
             break;
 
             case 3:
