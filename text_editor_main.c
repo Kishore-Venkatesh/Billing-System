@@ -122,6 +122,11 @@ int main()
             break;
 
             case 3:
+            // Search for text in file 
+            searchText(&file,buffer);
+            break;
+
+            case 4:
             // Close the file
             closeFile(&file);
             break;
