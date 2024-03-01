@@ -8,6 +8,18 @@
 #define MAX_FILENAME_LENGTH 20
 #define MAX_BUFFER_SIZE 1024
 
+// A enum to substitute the numeral constants used for switch case
+enum E_NUM
+{
+    E_ONE=1,
+    E_TWO,
+    E_THREE,
+    E_FOUR,
+    E_FIVE,
+    E_SIX,
+    E_SEVEN
+};
+
 // A void function to display the menu of operations that can be done in a text editor
 void menu()
 {
@@ -166,37 +178,37 @@ int main()
         // A switch-case statement for the text editor menu
         switch(choice)
         {
-            case 1:
+            case E_ONE:
             // Open the file 
             openFile(filename,&file);
             break;
             
-            case 2:
+            case E_TWO:
             // View the contents of the file 
             viewContent(&file,buffer);
             break;
 
-            case 3:
+            case E_THREE:
             // Search for text in file 
             searchText(&file,buffer);
             break;
 
-            case 4:
+            case E_FOUR:
             // Clear the buffer
             clearBuffer(buffer);
             break;
 
-            case 5:
+            case E_FIVE:
             // Edit the file
             editFile(&file,buffer);
             break;
 
-            case 6:
+            case E_SIX:
             // Save the file
             saveFile(filename, &file,buffer);
             break;
 
-            case 7:
+            case E_SEVEN:
             // Close the file
             closeFile(&file);
             break;
