@@ -21,12 +21,12 @@ The Command Line Text Editor is a simple C program that allows users to perform 
 1. Ensure you have a C compiler installed (e.g., GCC).
 2. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/command-line-text-editor.git
-   cd command-line-text-editor
+   git clone https://github.com/Kishore-Venkatesh/Text-Editor.git
+   cd TEXT-EDITOR
    ```
 3. Compile the program:
    ```bash
-   gcc -o text_editor text_editor.c
+   gcc -o text_editor text_editor_main.c
    ```
 4. Run the program:
    ```bash
